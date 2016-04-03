@@ -11,9 +11,6 @@
     = f.label :site_url
     = f.text_field :site_url
 
-%p Features
-
-= form_for @basic_configuration do |f|
   .div
     = f.label :variation
     = f.number_field :variation
@@ -22,13 +19,13 @@
     = f.text_field :default_behavior
   .div
     = f.label :enable_detect_variation
-    = f.check_box :enable_detect_variation, {}, true, false
+    = f.check_box :enable_detect_variation, {}, true, "false"
   .div
     = f.label :enable_AMPS
-    = f.check_box :enable_AMPS, {}, true, false
+    = f.check_box :enable_AMPS, {}, true, "false"
   .div
     = f.label :enable_origin_experiements
-    = f.check_box :enable_origin_experiements, {}, true, false
+    = f.check_box :enable_origin_experiements, {}, true, "false"
 
   .div
     = f.submit
