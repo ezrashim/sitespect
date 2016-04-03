@@ -1,6 +1,6 @@
 class CreateConfigurations < ActiveRecord::Migration
   def change
-    create_table :configurations do |t|
+    create_table :basic_configurations do |t|
       t.string :site_name, null: false
       t.string :status, null: false
       t.string :site_url, null: false

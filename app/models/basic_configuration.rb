@@ -1,4 +1,4 @@
-class Configuration < ActiveRecord::Base
+class BasicConfiguration < ActiveRecord::Base
   validates :site_name, presence: true
   validates :status, presence: true
   validates :site_url, presence: true

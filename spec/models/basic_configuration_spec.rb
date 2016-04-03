@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-describe Configuration do
+describe BasicConfiguration do
   it { should have_valid(:site_name).when("My Site") }
   it { should_not have_valid(:site_name).when("", nil) }
 
@@ -28,7 +28,7 @@ describe Configuration do
   it { should have_valid(:enable_AMPS).when(false) }
   it { should have_valid(:enable_AMPS).when(true) }
   it { should_not have_valid(:enable_AMPS).when("", nil) }
-  
+
   it { should have_valid(:enable_origin_experiements).when(false) }
   it { should have_valid(:enable_origin_experiements).when(true) }
   it { should_not have_valid(:enable_origin_experiements).when("", nil) }

@@ -17,13 +17,13 @@ ActiveRecord::Schema.define(version: 20160402031517) do
   enable_extension "plpgsql"
 
   create_table "amps_configurations", force: :cascade do |t|
-    t.string  "AMPS_config",      null: false
-    t.integer "configuration_id", null: false
+    t.string  "AMPS_config",            null: false
+    t.integer "basic_configuration_id", null: false
   end
 
-  add_index "amps_configurations", ["configuration_id"], name: "index_amps_configurations_on_configuration_id", using: :btree
+  add_index "amps_configurations", ["basic_configuration_id"], name: "index_amps_configurations_on_basic_configuration_id", using: :btree
 
-  create_table "configurations", force: :cascade do |t|
+  create_table "basic_configurations", force: :cascade do |t|
     t.string  "site_name",                                  null: false
     t.string  "status",                                     null: false
     t.string  "site_url",                                   null: false
@@ -35,11 +35,11 @@ ActiveRecord::Schema.define(version: 20160402031517) do
   end
 
   create_table "origin_experiments", force: :cascade do |t|
-    t.string  "campaign_delimiter", null: false
-    t.string  "factor_delimiter",   null: false
-    t.integer "configuration_id",   null: false
+    t.string  "campaign_delimiter",     null: false
+    t.string  "factor_delimiter",       null: false
+    t.integer "basic_configuration_id", null: false
   end
 
-  add_index "origin_experiments", ["configuration_id"], name: "index_origin_experiments_on_configuration_id", using: :btree
+  add_index "origin_experiments", ["basic_configuration_id"], name: "index_origin_experiments_on_basic_configuration_id", using: :btree
 
 end

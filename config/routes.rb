@@ -4,7 +4,7 @@ Sitespect::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # root 'welcome#index'
-
+  root 'basic_configurations#new'
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
@@ -25,7 +25,7 @@ Sitespect::Application.routes.draw do
   #       get 'sold'
   #     end
   #   end
-
+  resources :basic_configurations
   # Example resource route with sub-resources:
   #   resources :products do
   #     resources :comments, :sales
